@@ -1,4 +1,3 @@
-
 line_chart_utterances = ["[x_axis] over [y_axis]", 
                          "how does [y_axis] change with [x_axis]", 
                          "[y_axis] as a function of [x_axis]", "line chart showing [y_axis] over [x_axis]"]
@@ -37,6 +36,7 @@ def create_bar_chart(x_axis, y_axis):
         y=y_axis, 
     )
     return chart
+
 
 
 reference = {"location": ("lat", "long")}
@@ -94,6 +94,7 @@ def time_series_forecast(data, prediction_interval):
     forecast = m.predict(future)
     fig = m.plot(forecast)
     return fig
+
 
 
 program_annotations = {"line chart": {"function": create_line_chart, "info": line_chart_info}, 
